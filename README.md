@@ -2,8 +2,8 @@
 
 #### Prerequisite: Setup Project in Local
 ```
-git clone https://github.com/sf-fresher-batch-2020/your-angular-project.git
-cd your-angular-project
+git clone https://github.com/sf-fresher-batch-2020/libraryapp-angular-ui.git
+cd libraryapp-angular-ui
 git checkout -M main
 npm install
 ng serve
