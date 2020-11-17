@@ -1,0 +1,28 @@
+<div class="h-100 container-fluid bg-light">
+    <div class="row text-justify text-center align-items-center justify-content-center h-100">
+        <div class="col-lg h-auto">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 border rounded">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="text-left p-4" autocomplete="off">
+                        <h1 style="text-align: center;">Registration</h1>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" formControlName="name" id="name" name="name" placeholder="enter your name" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" formControlName="email" id="email" name="email" placeholder="enter your mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" formControlName="password" id="password" name="password" placeholder="enter your password" required>
+                        </div>
+                        <button type="submit" [disabled]="loading" class="btn btn-primary">
+                          Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
