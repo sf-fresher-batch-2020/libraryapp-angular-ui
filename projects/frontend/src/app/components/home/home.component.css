@@ -21,10 +21,12 @@ body {
     position: relative;
     padding-top: 6%;
     padding-bottom: 6%;
-    margin-top: 12%;
+    margin-top: 15%;
     margin-bottom: 12%;
     background-color: rgba(104, 96, 96, 0.7);
     max-width: 660px;
+    text-align: center;
+    margin-left: 250px;
 }
 
 .container {
