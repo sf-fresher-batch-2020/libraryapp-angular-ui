@@ -11,8 +11,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SignupComponent],
+  declarations: [AppComponent, HeaderComponent, SignupComponent, SigninComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

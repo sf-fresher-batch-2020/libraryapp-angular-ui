@@ -8,6 +8,7 @@ import { environment } from '../../environments/environment';
 export class UserService {
 
   private apiUrl: string;
+  users:any;
 
   constructor(private http: HttpClient) { 
     this.apiUrl = environment.API_URL;
@@ -16,4 +17,8 @@ export class UserService {
     let url = this.apiUrl + "/users";
     return this.http.post(url, user);
   }
+  getUsers(){
+    let url = this.apiUrl + "/users";
+    return this.http.get(url);
+     }
 }
