@@ -21,4 +21,17 @@ export class UserService {
     let url = this.apiUrl + "/users";
     return this.http.get(url);
      }
+  createProfile(user) {
+      const url = this.apiUrl + '/profiles';
+      const profile = { userId: user.id};
+      return this.http.post(url, profile);
+    }
+  
+    getProfile(id) {
+      const url = this.apiUrl + '/profiles';
+      console.log(url);
+      return this.http.get(url, id);
+    }
+  
+  
 }

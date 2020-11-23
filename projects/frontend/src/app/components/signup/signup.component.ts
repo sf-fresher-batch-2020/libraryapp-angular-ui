@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
       console.log(res);
      this.toastr.success("Successfully Registered");
       form.reset();
-      this.router.navigate(['login']);
+      this.router.navigate(['signin']);
     },err=>{
       console.error(err);
       this.toastr.error("Registration failed");

@@ -1,0 +1,29 @@
+<div class="sidebar">
+    <a class="active" href="#profile">Profile</a>
+    <a routerLink="addbooks">Add Books</a>
+    <a routerLink="bookslist">Books List</a>
+</div>
+
+<div class="content">
+    <h1 style="color: blue;">Profile</h1>
+    <div id="Profile">
+        <table class="table table-hover table-light m-5">
+
+            <tbody *ngIf="currentUser">
+                <tr>
+                    <th>User Name :</th>
+                    <td>{{ currentUser.name }}</td>
+                </tr>
+                <tr>
+                    <th>Email :</th>
+                    <td>{{ currentUser.email }}</td>
+                </tr>
+                <tr>
+                    <th>Mobile no :</th>
+                    <td>{{ currentUser.mobileno }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

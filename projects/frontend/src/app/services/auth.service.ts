@@ -6,11 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  
+
   constructor(private http:HttpClient) {}
   getLoggedInUser(){
-    let user  = localStorage.getItem("LOGGED_IN_USER");
-    let loggedInUser = user ? JSON.parse(user) : null;
+    let user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
+    let loggedInUser = user ? user : null;
     return loggedInUser;
   }
 
@@ -24,6 +24,6 @@ export class AuthService {
   }
 
   storeLoginDetails(userObj){
-    localStorage.setItem("LOGGED_IN_USER", JSON.stringify(userObj));
+    localStorage.setItem("LOGGED_IN_USER",JSON.stringify(userObj));
   }
 }
