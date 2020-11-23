@@ -12,8 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AddbookComponent } from './components/addbook/addbook.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SignupComponent, SigninComponent],
+  declarations: [AppComponent, HeaderComponent, SignupComponent, SigninComponent, AdminComponent, AddbookComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

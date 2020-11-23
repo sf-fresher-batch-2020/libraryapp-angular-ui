@@ -9,6 +9,7 @@ export class UserService {
 
   private apiUrl: string;
   users:any;
+  books:any;
 
   constructor(private http: HttpClient) { 
     this.apiUrl = environment.API_URL;
@@ -32,6 +33,15 @@ export class UserService {
       console.log(url);
       return this.http.get(url, id);
     }
-  
+
+    addedbook(books){
+      let url = this.apiUrl + "/books";
+      return this.http.post(url, books);
+    }
+    
+    getbooks(){
+      let url = this.apiUrl + "/books";
+      return this.http.get(url);
+    }
   
 }
