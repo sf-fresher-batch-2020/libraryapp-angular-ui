@@ -33,8 +33,8 @@ export class BooklistComponent implements OnInit {
     this.userService.deletebook(id).subscribe(res => {
       this.selectbook= null; 
      window.location.reload();
-     this.toastr.success('book deleted!');// reset the data;
-    // refresh the data
+     this.toastr.success('book deleted!');
+  
     });
   }
 
