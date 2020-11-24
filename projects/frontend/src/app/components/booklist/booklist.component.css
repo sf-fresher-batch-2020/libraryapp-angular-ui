@@ -1,0 +1,13 @@
+#heading {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: dodgerblue;
+}
+
+table thead {
+    background-color: lightskyblue;
+}

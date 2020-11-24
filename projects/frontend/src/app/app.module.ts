@@ -14,8 +14,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AddbookComponent } from './components/addbook/addbook.component';
+import { BooklistComponent } from './components/booklist/booklist.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SignupComponent, SigninComponent, AdminComponent, AddbookComponent],
+  declarations: [AppComponent, HeaderComponent, SignupComponent, SigninComponent, AdminComponent, AddbookComponent, BooklistComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

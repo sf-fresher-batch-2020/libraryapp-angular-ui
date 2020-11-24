@@ -43,5 +43,12 @@ export class UserService {
       let url = this.apiUrl + "/books";
       return this.http.get(url);
     }
-  
+    getbook(id:number){
+      let url=this.apiUrl + "/books"+id;
+      return this.http.get(url);
+    }
+    deletebook(id) {
+      let url = this.apiUrl + "/books/" + id;
+      return this.http.delete(url);
+    }
 }
