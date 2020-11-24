@@ -51,4 +51,14 @@ export class UserService {
       let url = this.apiUrl + "/books/" + id;
       return this.http.delete(url);
     }
+    borrowbook(books) {
+      let url = this.apiUrl + "/borrowbooks";
+      return this.http.get(url,books);
+    }
+    getborrowbooks(){
+      let url = this.apiUrl + "/borrowbooks";
+    return this.http.get(url);
+    }
+    
+   
 }

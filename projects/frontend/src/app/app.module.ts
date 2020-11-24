@@ -15,8 +15,10 @@ import { SigninComponent } from './components/signin/signin.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AddbookComponent } from './components/addbook/addbook.component';
 import { BooklistComponent } from './components/booklist/booklist.component';
+import { BorrowerComponent } from './components/borrower/borrower.component';
+import { BorrowbookComponent } from './components/borrowbook/borrowbook.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SignupComponent, SigninComponent, AdminComponent, AddbookComponent, BooklistComponent],
+  declarations: [AppComponent, HeaderComponent, SignupComponent, SigninComponent, AdminComponent, AddbookComponent, BooklistComponent, BorrowerComponent, BorrowbookComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
