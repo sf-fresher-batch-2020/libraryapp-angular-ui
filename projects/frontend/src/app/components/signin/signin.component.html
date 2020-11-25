@@ -1,0 +1,29 @@
+<body id="bg">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="container">
+                <h2 id="heading">Login</h2>
+
+                <form (ngSubmit)="signin(l)" #l="ngForm" autocomplete="off">
+
+                    <label>
+      <p class="label-txt">Email :</p>
+      <input type="email" name="email" id="email" class="input"  [(ngModel)]="email" placeholder="enter your email" required>
+      
+    </label>
+                    <label>
+      <p class="label-txt">Password :</p>
+      <input type="password" name="password" id="password" class="input" [(ngModel)]="password" placeholder="enter your password" required>
+      
+    </label>
+
+
+                    <button [disabled]="l.invalid">Sign in</button>
+                    <br />
+                    <br />
+                    <p>If not registered yet,<a routerLink="../signup" class="text-info">click here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

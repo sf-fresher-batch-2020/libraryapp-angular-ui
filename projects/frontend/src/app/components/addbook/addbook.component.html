@@ -1,0 +1,43 @@
+<body id="bg">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="container">
+                <h2 id="heading">ADD BOOKS</h2>
+
+                <form (ngSubmit)="addbook(f)" #f="ngForm" autocomplete="off">
+
+                    <label>
+        <p class="label-txt">Book Title :</p>
+        <input type="text" name="title" class="input" id="title"  [(ngModel)]="title" required autofocus>
+        
+    </label>
+                    <label>
+      <p class="label-txt">Author :</p>
+      <input type="text" name="author" id="author" class="input"  [(ngModel)]="author" required>
+      
+    </label>
+                    <label>
+      <p class="label-txt">Publisher :</p>
+      <input type="text" name="publisher" id="publisher" class="input" [(ngModel)]="publisher" required>
+      
+    </label>
+
+                    <label>
+        <p class="label-txt">Category :</p>
+        <select name="category" class="input" [(ngModel)]="category" required >
+            <option disabled>---PLEASE SELECT---</option>
+            <option class="input" value="CSE">Computer science</option>
+            <option class="input" value="ECE">Electronics and communication</option>
+            <option class="input" value="IT">Information technoligies</option>
+            <option class="input" value="ENG">Literature</option>
+            <option class="input" value="Ref">Other</option>
+        </select>
+        
+      </label>
+                    <button [disabled]="f.invalid">Add Book</button><br/>
+                    <a routerLink="/admin">Back</a>&nbsp;&nbsp; <a routerLink="/booklist" style="text-decoration:underline;">ViewBooks</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

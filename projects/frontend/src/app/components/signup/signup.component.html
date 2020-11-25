@@ -1,0 +1,48 @@
+<body id="bg">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="container">
+                <h2 id="heading">Registration</h2>
+
+                <form (ngSubmit)="signup(f)" #f="ngForm" autocomplete="off">
+
+                    <label>
+        <p class="label-txt">Name :</p>
+        <input type="text" name="name" class="input" id="name"  [(ngModel)]="name" placeholder="enter your name" required autofocus>
+        
+    </label>
+                    <label>
+      <p class="label-txt">Email :</p>
+      <input type="email" name="email" id="email" class="input"  [(ngModel)]="email" placeholder="enter your email" required>
+      
+    </label>
+                    <label>
+      <p class="label-txt">Password :</p>
+      <input type="password" name="password" id="password" class="input" [(ngModel)]="password" placeholder="create password" required>
+      
+    </label>
+                    <label>
+        <p class="label-txt">Confirm Password :</p>
+        <input type="password" name="confirmpassword" id="confirmpassword" class="input" [(ngModel)]="confirmpassword" placeholder="enter a password" required>
+       
+    </label>
+                    <label>
+        <p class="label-txt">Mobile no :</p>
+        <input type="number" name="mobileno" id="mobileno" class="input" [(ngModel)]="mobileno" placeholder="enter mobile number" required>
+        
+    </label>
+                    <label>
+        <p class="label-txt">Select your role :</p>
+        <select name="role" class="input" [(ngModel)]="role" required >
+            <option disabled>---PLEASE SELECT---</option>
+            <option class="input" value="ADMIN">Admin</option>
+            <option class="input" value="BORROWER">Borrower</option>
+        </select>
+        
+      </label>
+                    <button [disabled]="f.invalid">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
