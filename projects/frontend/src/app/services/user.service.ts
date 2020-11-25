@@ -29,9 +29,9 @@ export class UserService {
     }
   
     getProfile(id) {
-      const url = this.apiUrl + '/profiles';
-      console.log(url);
-      return this.http.get(url, id);
+      const url = this.apiUrl + '/profiles/' + id;
+      // console.log(url);
+      return this.http.get(url);
     }
 
     addedbook(books){
@@ -44,21 +44,19 @@ export class UserService {
       return this.http.get(url);
     }
     getbook(id:number){
-      let url=this.apiUrl + "/books"+id;
+      let url=this.apiUrl + "/books/"+id;
       return this.http.get(url);
     }
     deletebook(id) {
       let url = this.apiUrl + "/books/" + id;
       return this.http.delete(url);
     }
-    borrowbook(books) {
+    borrowbook(book) {
       let url = this.apiUrl + "/borrowbooks";
-      return this.http.get(url,books);
+      return this.http.post(url, book);
     }
     getborrowbooks(){
       let url = this.apiUrl + "/borrowbooks";
     return this.http.get(url);
     }
-    
-   
 }
