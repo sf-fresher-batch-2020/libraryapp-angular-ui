@@ -16,7 +16,7 @@ export class BorrowerComponent implements OnInit {
   currentProfile;
   ngOnInit(): void {
     console.log(this.currentUser.id);
-    this.userService.getProfile({id: this.currentUser.id}).subscribe(
+    this.userService.getProfile(this.currentUser.id).subscribe(
       data => {
         this.currentProfile = data[0];
   });

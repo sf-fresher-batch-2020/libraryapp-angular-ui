@@ -31,7 +31,7 @@ export class BooklistComponent implements OnInit {
   deleteBook(id) {
     console.log("Deleting user :" + id);
     this.userService.deletebook(id).subscribe(res => {
-      this.selectbook= null; 
+      //this.selectbook= null; 
      window.location.reload();
      this.toastr.success('book deleted!');
   

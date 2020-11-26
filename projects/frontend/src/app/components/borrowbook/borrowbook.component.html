@@ -31,12 +31,12 @@
 
                     <td>{{book.category}}</td>
 
-                    <td>{{book.id}}</td>
+                    <td>{{book.bookid}}</td>
 
-                    <td><button type="button" class="btn btn-danger" (click)="borrowBook(book.id)">Borrowbook</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="borrowBook(book.bookid)">Borrowbook</button></td>
                 </tr>
             </tbody>
         </table>
-        <a id="back" class="btn btn-success" routerLink="/admin">Back</a>
+        <a id="back" class="btn btn-success" routerLink="/borrower">Back</a>
     </div>
 </div>

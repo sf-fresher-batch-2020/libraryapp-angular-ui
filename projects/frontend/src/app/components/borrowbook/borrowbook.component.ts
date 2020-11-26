@@ -30,11 +30,13 @@ export class BorrowbookComponent implements OnInit {
   }
   borrowBook(id) {
     console.log("Borrowing Book :" + id);
-    this.userService.borrowbook(id).subscribe(res => {
-      this.selectbook= null; 
-     window.location.reload();
-     this.toastr.success('book borrowed!');
-    });
-  
+    let book = this.userService.getbook(id).subscribe(  // getting from all books
+      data => {
+        console.log(data);
+        this.userService.borrowbook(data).subscribe(res => { // putting on borrowed books
+          this.toastr.success('book borrowed!');
+          window.location.reload();
+         });
+        });
   } 
 }
