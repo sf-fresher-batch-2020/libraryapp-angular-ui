@@ -48,8 +48,8 @@ export class UserService {
       return this.http.get(url);
     }
     deletebook(id) {
-      let url = this.apiUrl + "/books/delete" ;
-      return this.http.post(url,id);
+      let url = this.apiUrl + "/books/" + id ;
+      return this.http.delete(url);
     }
     borrowbook(book) {
       let url = this.apiUrl + "/borrowbooks";

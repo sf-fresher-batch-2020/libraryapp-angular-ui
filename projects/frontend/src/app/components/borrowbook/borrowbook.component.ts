@@ -35,7 +35,7 @@ export class BorrowbookComponent implements OnInit {
         console.log(data);
         this.userService.borrowbook(data).subscribe(res => { // putting on borrowed books
           this.toastr.success('book borrowed!');
-          window.location.reload();
+         // window.location.reload();
          });
         });
   } 
