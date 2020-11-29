@@ -18,9 +18,10 @@ export class BorrowbookComponent implements OnInit {
       this.id = +params["id"];
      })
   }
-  selectbook;
+  
   ngOnInit(): void {
     this.borrowbooks();
+    this.filterCategory('ALL');
   }
 
   borrowbooks(){
@@ -28,9 +29,30 @@ export class BorrowbookComponent implements OnInit {
       this.books = res;
     })
   }
-  borrowBook(id) {
-    console.log("Borrowing Book :" + id);
-    let book = this.userService.getbook(id).subscribe(  // getting from all books
+
+
+  //filtering
+  filterCategory(category) {
+    this.userService.getbooks().subscribe(res => {
+      let books: any = res;
+      
+      let filteredData = null;
+      if (category == 'ALL') {
+        filteredData = books;
+      }
+      else {
+        filteredData = books.filter(obj => obj.category == category);
+      }
+
+      this.books = filteredData;
+    });
+  }
+
+
+//borrow books
+  borrowBook(i) {
+    console.log("Borrowing Book :" + i);
+    this.userService.getbook(i).subscribe(  // getting from all books
       data => {
         console.log(data);
         this.userService.borrowbook(data).subscribe(res => { // putting on borrowed books

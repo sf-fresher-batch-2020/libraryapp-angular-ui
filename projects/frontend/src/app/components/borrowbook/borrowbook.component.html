@@ -1,4 +1,23 @@
 <h2 id="heading">Book List</h2>
+<br />
+<br />
+<div class="row">
+    <!-- select for filtering data -->
+    <div class="col-3">
+        <label>Search By Category: </label>
+        <select id="filter_category" (change)="filterCategory($event.target.value)">
+        <option value="ALL">ALL</option>
+        <option value="CSE">Computer science</option>
+        <option value="ECE">Electronics and communication</option>
+        <option value="IT">Information technoligies</option>
+        <option value="ENG">Literature</option>
+        <option value="Ref">Other</option>
+    </select>
+    </div>
+</div>
+
+<br />
+<br />
 <div class="container-fluid">
     <div class="row">
         <table class="table table-bordered" id="tablestyle">
