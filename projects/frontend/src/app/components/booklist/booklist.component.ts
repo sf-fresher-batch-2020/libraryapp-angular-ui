@@ -17,7 +17,7 @@ export class BooklistComponent implements OnInit {
      this.id = +params["id"];
     })
   }
-  selectbook;
+  
   ngOnInit(): void {
     this.bookslist();
   }
@@ -28,14 +28,15 @@ export class BooklistComponent implements OnInit {
     })
   }
 
-  deleteBook(id) {
-    console.log("Deleting user :" + id);
-    this.userService.deletebook(id).subscribe(res => {
-      //this.selectbook= null; 
+  deleteBook(j) {
+    console.log("Deleting user :" + j);
+    this.userService.deletebook(j).subscribe(res => {
+     // this.selectbook= null; 
      window.location.reload();
      this.toastr.success('book deleted!');
+     this.bookslist();
   
-    });
+    })
   }
 
 }
